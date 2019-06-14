@@ -35,6 +35,7 @@ func Gzip(level int) gin.HandlerFunc {
 
 		gz := gzPool.Get().(*gzip.Writer)
 		defer gzPool.Put(gz)
+		defer gz.Reset(ioutil.Discard)
 		gz.Reset(c.Writer)
 
 		c.Header("Content-Encoding", "gzip")
