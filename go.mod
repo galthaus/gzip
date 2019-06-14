@@ -1,4 +1,4 @@
-module github.com/gin-contrib/gzip
+module github.com/galthaus/gzip
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
